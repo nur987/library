@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import logo from "./assets/book.png";
 
 import "./App.css";
+import { Rating } from "@mui/material";
 function App() {
   const [datas, setData] = useState([]);
   const [searchKey, setSearchKey] = useState("");
@@ -11,7 +12,7 @@ function App() {
       .then((response) => response.json())
       .then((data) => setData(data.books));
   }, []);
-  console.log(datas);
+  console.log(datas.sort());
   return (
     <div className="App">
       <header className="App-header">
@@ -110,8 +111,17 @@ function App() {
                   <img src={x.image} class="card-img-top" alt={x.title} />
                   <div class="card-body">
                     <p class="card-text">{x.subtitle}</p>
-                    <div className="price">
-                      <h5>{x.price}</h5>
+                    <div className="row price">
+                      <div className="col">
+                        <h5>{x.price}</h5>
+                      </div>
+                      <div className="col">
+                        <Rating
+                          name="half-rating"
+                          defaultValue={2.5}
+                          precision={0.5}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>

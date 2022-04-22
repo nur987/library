@@ -50,7 +50,7 @@
   font-size: 16px;
   text-decoration: none;
 }
-
+/* for position on bottom */
 .price {
   position: absolute;
   bottom: 0;
@@ -70,5 +70,5 @@
 }
 
 .inputSearch {
-  width: 430px;
+  width: 430px !important;
 }
