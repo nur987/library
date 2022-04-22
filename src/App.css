@@ -57,18 +57,18 @@
 }
 
 .navbar-brand > .countBooks {
-  position: absolute;
-  display: flex;
-  font-size: 12px;
-  width: 20px;
-  height: 20px;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(236, 40, 40);
-  border-radius: 50%;
   left: 65px;
+  bottom: 20px;
 }
 
 .inputSearch {
   width: 430px !important;
+}
+
+.circular {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
 }
